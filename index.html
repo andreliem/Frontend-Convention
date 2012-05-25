@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Html-css-conventions by maxparm</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Html-css-conventions</h1>
+        <p>HTML/CSS Conventions</p>
+        <p class="view"><a href="https://github.com/maxparm/HTML-CSS-Conventions">View the Project on GitHub <small>maxparm/HTML-CSS-Conventions</small></a></p>
+        <ul>
+          <li><a href="https://github.com/maxparm/HTML-CSS-Conventions/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/maxparm/HTML-CSS-Conventions/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/maxparm/HTML-CSS-Conventions">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Layout Structures</h3>
+
+<p>Name your content by HTML structural elements. Add suffix “-container” for clarity. Also name the parent container "container"</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sidebar-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre>
+</div>
+
+
+<h3>HTML/CSS Naming</h3>
+
+<ul>
+<li><p>Name your id, class after the elements description and not about the visual elements, use <code>.external-link</code> instead of <code>.red-link</code> =&gt; what if you change the color of the link?</p></li>
+<li>
+<p>Use hyphen to name your attribute and class.</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-title"</span> <span class="na">class=</span><span class="s">"header-title"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+</div>
+</li>
+</ul><h3>CSS Coding style</h3>
+
+<ul>
+<li>Never use #id in your css files. Only class otherwise Css Lint won’t like it. To keep it clean, name your class the same as your id, or use smartly parents, children selectors. </li>
+</ul><h3>Javascript Coding style</h3>
+
+<ul>
+<li>variables and function names are written in camelCase. </li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/maxparm">maxparm</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
