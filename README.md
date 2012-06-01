@@ -18,6 +18,7 @@ Name your content by HTML structural elements.
 * Never name your content after the visual appearance but after its description. (e.g. prefer "sidebar-container" than "left-container")
 * Add suffix “-container” for clarity to the primary parent element.
 * Add container name prefix on subcontent (e.g. header-container > header-title)
+
 ```html
 <body>
     <div id="container">
@@ -34,6 +35,7 @@ Name your content by HTML structural elements.
 ### HTML Attributes Naming
 * Name your id, class after the elements description and not about the visual elements, use `.external-link` instead of `.red-link` => what if you change the color of the link?
 * Use hyphen to name your attribute and class.
+
 ```html
 <div>
     <div id="header-container">...</div>
