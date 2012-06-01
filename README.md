@@ -68,7 +68,7 @@ Name your content by HTML structural elements.
 * JSLint your javascript before pushing live.
 * Always put semicolons
 * Use DocBlock comment above variable and function declarations, use inline comment inside function to describe algorithm.
-```js
+```javascript
 /**
  * This is the foo function
  */
