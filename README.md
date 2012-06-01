@@ -43,7 +43,7 @@ Name your content by HTML structural elements.
 </div>
 ```
 
-***
+
 
 ## CSS
 
@@ -65,4 +65,19 @@ Name your content by HTML structural elements.
 ## Javascript
 
 * Please use Douglas Crockford javascript convention: http://javascript.crockford.com/code.html
-* JSLint your javascript before pushing live. 
+* JSLint your javascript before pushing live.
+* Always put semicolons
+* Use DocBlock comment above variable and function declarations, use inline comment inside function to describe algorithm.
+```js
+/**
+ * This is the foo function
+ */
+foo = function() {
+    // this is an inline comment
+    var baz = 'bar';   
+    return baz;
+};
+```
+
+
+
