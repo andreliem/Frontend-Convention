@@ -1,4 +1,4 @@
-# HTML
+## HTML
 
 ### Zen Coding
 Zen coding will increase your HTML writing speed using an abbreviation syntax similar to css selectors.
@@ -12,7 +12,6 @@ Zen coding will increase your HTML writing speed using an abbreviation syntax si
     </ul>
 </div>
 ````
-
 
 ### Layout Structures
 Name your content by HTML structural elements. 
@@ -42,21 +41,26 @@ Name your content by HTML structural elements.
 </div>
 ```
 
+***
 
-# CSS
+## CSS
 
 ### Convention
 * Never use #id in your css files. Only class selectors are authorized in a css file. 
 * To keep your HTML/CSS clean, name your class as your id. `<div class="header-title" id="header-title"></div>`
 * Minimize the depth of your css selector `.article-list ul li h1.title` can be replaced by `.article-list .title`
 * CSS Lint your css before pushing live
-* Use Less.css to write your css: http://lesscss.org/
+
+### Less
+* Use Less.css to write your css: http://lesscss.org/. This will improve and structure better your stylesheet files.
+* Use the lessprefixer file: http://lessprefixer.com/ It will add the vendor prefixer (webkit, firefox, etc...) to increase the compatibility cross-browser.
 
 ### Resources
 * Read http://smacss.com/book/
 
+***
 
-# Javascript
+## Javascript
 
 * Please use Douglas Crockford javascript convention: http://javascript.crockford.com/code.html
 * JSLint your javascript before pushing live. 
