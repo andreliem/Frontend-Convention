@@ -1,19 +1,39 @@
+# HTML
+
+### Zen Coding
+Zen coding will increase your HTML writing speed using an abbreviation syntax similar to css selectors.
+```html
+<!-- div#container>ul>li*3 will output -->
+<div id="container">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+````
+
+
 ### Layout Structures
-Name your content by HTML structural elements. Add suffix “-container” for clarity. Also name the parent container "container"
+Name your content by HTML structural elements. 
+* Never name your content after the visual appearance but after its description. (e.g. prefer "sidebar-container" than "left-container")
+* Add suffix “-container” for clarity to the primary parent element.
+* Add container name prefix on subcontent (e.g. header-container > header-title)
 ```html
 <body>
     <div id="container">
-        <div id="header-container">...</div>
+        <div id="header-container">
+            <div id="header-logo">...</div>
+            <div>...</div>
+        </div>
         <div id="content-container">...</div>
         <div id="sidebar-container">...</div>
     </div>
 </body>
 ```
 
-
-### HTML/CSS Naming
+### HTML Attributes Naming
 * Name your id, class after the elements description and not about the visual elements, use `.external-link` instead of `.red-link` => what if you change the color of the link?
-
 * Use hyphen to name your attribute and class.
 ```html
 <div>
@@ -23,10 +43,20 @@ Name your content by HTML structural elements. Add suffix “-container” for c
 ```
 
 
-### CSS Coding style
-* Never use #id in your css files. Only class otherwise Css Lint won’t like it. To keep it clean, name your class the same as your id, or use smartly parents, children selectors. 
+# CSS
+
+### Convention
+* Never use #id in your css files. Only class selectors are authorized in a css file. 
+* To keep your HTML/CSS clean, name your class as your id. `<div class="header-title" id="header-title"></div>`
+* Minimize the depth of your css selector `.article-list ul li h1.title` can be replaced by `.article-list .title`
+* CSS Lint your css before pushing live
+* Use Less.css to write your css: http://lesscss.org/
+
+### Resources
+* Read http://smacss.com/book/
 
 
+# Javascript
 
-### Javascript Coding style
-* variables and function names are written in camelCase. 
+* Please use Douglas Crockford javascript convention: http://javascript.crockford.com/code.html
+* JSLint your javascript before pushing live. 
