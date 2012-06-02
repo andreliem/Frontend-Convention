@@ -80,5 +80,7 @@ foo = function() {
 };
 ```
 
+### Jquery
+* Please write jquery plugin following the structure shown at http://jqueryboilerplate.com/
 
 
