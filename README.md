@@ -80,6 +80,20 @@ foo = function() {
 };
 ```
 
+* If you need to create an alias of `this`: use `self`
+
+```javascript
+var foo = {
+  baz: 'Hello World',
+  bar: function() {
+    var self = this;
+    var st = setTimeout(function(){
+      return self.baz;
+    }, 1000);
+  }  
+};
+```
+
 ### Jquery
 * Please write jquery plugin following the structure shown at http://jqueryboilerplate.com/
 
