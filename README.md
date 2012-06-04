@@ -65,7 +65,7 @@ Name your content by HTML structural elements.
 ## Javascript
 
 * Please use Douglas Crockford javascript convention: http://javascript.crockford.com/code.html
-* JSLint your javascript before pushing live.
+* JSLint your javascript. This tool maintained by Douglas Crockford respects its code convention.
 * Always put semicolons
 * Use DocBlock comment above variable and function declarations, use inline comment inside function to describe algorithm.
 
