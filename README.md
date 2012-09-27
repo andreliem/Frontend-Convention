@@ -17,13 +17,13 @@ Zen coding will increase your HTML writing speed using an abbreviation syntax si
 Name your content by HTML structural elements. 
 * Never name your content after the visual appearance but after its description. (e.g. prefer "sidebar-container" than "left-container")
 * Add suffix “-container” for clarity to the primary parent element.
-* Add container name prefix on subcontent (e.g. header-container > header-title)
+* ~~Add container name prefix on subcontent (e.g. header-container > header-title)~~ No need to add the container name as prefix because using less, yu can nest you class in the contaner class, which make more sense.
 
 ```html
 <body>
     <div id="container">
         <div id="header-container">
-            <div id="header-logo">...</div>
+            <div class="logo">...</div>
             <div>...</div>
         </div>
         <div id="content-container">...</div>
@@ -38,8 +38,9 @@ Name your content by HTML structural elements.
 
 ```html
 <div>
-    <div id="header-container">...</div>
-    <div id="header-title" class="header-title">...</div>
+    <div id="header-container">
+        <div id="header-title" class="title">...</div>
+    </div>
 </div>
 ```
 
