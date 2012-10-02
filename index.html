@@ -1,77 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Html-css-conventions by maxparm</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Frontend Conventions : Documentation of the convention that I am following for frontend dev" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Frontend Conventions</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Html-css-conventions</h1>
-        <p>HTML/CSS Conventions</p>
-        <p class="view"><a href="https://github.com/maxparm/HTML-CSS-Conventions">View the Project on GitHub <small>maxparm/HTML-CSS-Conventions</small></a></p>
-        <ul>
-          <li><a href="https://github.com/maxparm/HTML-CSS-Conventions/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/maxparm/HTML-CSS-Conventions/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/maxparm/HTML-CSS-Conventions">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Layout Structures</h3>
 
-<p>Name your content by HTML structural elements. Add suffix “-container” for clarity. Also name the parent container "container"</p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/maxparm/Frontend-Convention">View on GitHub</a>
 
-<div class="highlight">
-<pre><span class="nt">&lt;body&gt;</span>
+          <h1 id="project_title">Frontend Conventions</h1>
+          <h2 id="project_tagline">Documentation of the convention that I am following for frontend dev</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/maxparm/Frontend-Convention/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/maxparm/Frontend-Convention/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>HTML</h2>
+
+<h3>Zen Coding</h3>
+
+<p>Zen coding will increase your HTML writing speed using an abbreviation syntax similar to css selectors.</p>
+
+<div class="highlight"><pre><span class="c">&lt;!-- div#container&gt;ul&gt;li*3 will output --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<h3>Layout Structures</h3>
+
+<p>Name your content by HTML structural elements. </p>
+
+<ul>
+<li>Never name your content after the visual appearance but after its description. (e.g. prefer "sidebar-container" than "left-container")</li>
+<li>Add suffix “-container” for clarity to the primary parent element.</li>
+<li>
+<del>Add container name prefix on subcontent (e.g. header-container &gt; header-title)</del> No need to add the container name as prefix because using less, yu can nest you class in the contaner class, which make more sense.</li>
+</ul><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sidebar-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
-</pre>
-</div>
+</pre></div>
 
-
-<h3>HTML/CSS Naming</h3>
+<h3>HTML Attributes Naming</h3>
 
 <ul>
-<li><p>Name your id, class after the elements description and not about the visual elements, use <code>.external-link</code> instead of <code>.red-link</code> =&gt; what if you change the color of the link?</p></li>
-<li>
-<p>Use hyphen to name your attribute and class.</p>
-
-<div class="highlight">
-<pre><span class="nt">&lt;div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-container"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-title"</span> <span class="na">class=</span><span class="s">"header-title"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<li>Name your id, class after the elements description and not about the visual elements, use <code>.external-link</code> instead of <code>.red-link</code> =&gt; what if you change the color of the link?</li>
+<li>Use hyphen to name your attribute and class.</li>
+</ul><div class="highlight"><pre><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-title"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre>
-</div>
+</pre></div>
+
+<h2>CSS</h2>
+
+<h3>Convention</h3>
+
+<ul>
+<li>Never use #id in your css files. Only class selectors are authorized in a css file. </li>
+<li>To keep your HTML/CSS clean, name your class as your id. <code>&lt;div class="header-title" id="header-title"&gt;&lt;/div&gt;</code>
 </li>
-</ul><h3>CSS Coding style</h3>
+<li>Minimize the depth of your css selector <code>.article-list ul li h1.title</code> can be replaced by <code>.article-list .title</code>
+</li>
+<li>CSS Lint your css before pushing live</li>
+</ul><h3>Less</h3>
 
 <ul>
-<li>Never use #id in your css files. Only class otherwise Css Lint won’t like it. To keep it clean, name your class the same as your id, or use smartly parents, children selectors. </li>
-</ul><h3>Javascript Coding style</h3>
+<li>Use Less.css to write your css: <a href="http://lesscss.org/">http://lesscss.org/</a>. This will improve and structure better your stylesheet files.</li>
+<li>Use the lessprefixer file: <a href="http://lessprefixer.com/">http://lessprefixer.com/</a> It will add the vendor prefixer (webkit, firefox, etc...) to increase the compatibility cross-browser.</li>
+</ul><h3>Resources</h3>
 
 <ul>
-<li>variables and function names are written in camelCase. </li>
+<li>Read <a href="http://smacss.com/book/">http://smacss.com/book/</a>
+</li>
+</ul><hr><h2>Javascript</h2>
+
+<ul>
+<li>Please use Douglas Crockford javascript convention: <a href="http://javascript.crockford.com/code.html">http://javascript.crockford.com/code.html</a>
+</li>
+<li>JSLint your javascript. This tool maintained by Douglas Crockford respects its code convention.</li>
+<li>Always put semicolons</li>
+<li>Use DocBlock comment above variable and function declarations, use inline comment inside function to describe algorithm.</li>
+</ul><div class="highlight"><pre><span class="cm">/**</span>
+<span class="cm"> * This is the foo function</span>
+<span class="cm"> */</span>
+<span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// this is an inline comment</span>
+    <span class="kd">var</span> <span class="nx">baz</span> <span class="o">=</span> <span class="s1">'bar'</span><span class="p">;</span>   
+    <span class="k">return</span> <span class="nx">baz</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+
+<ul>
+<li>If you need to create an alias of <code>this</code>: use <code>self</code>
+</li>
+</ul><div class="highlight"><pre><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">baz</span><span class="o">:</span> <span class="s1">'Hello World'</span><span class="p">,</span>
+  <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">st</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="nx">self</span><span class="p">.</span><span class="nx">baz</span><span class="p">;</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}</span>  
+<span class="p">};</span>
+</pre></div>
+
+<h3>Jquery</h3>
+
+<ul>
+<li>Please write jquery plugin following the structure shown at <a href="http://jqueryboilerplate.com/">http://jqueryboilerplate.com/</a>
+</li>
 </ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/maxparm">maxparm</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Frontend Conventions maintained by <a href="https://github.com/maxparm">maxparm</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
